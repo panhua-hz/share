@@ -1,0 +1,16 @@
+start a hub:
+java -jar D:/swused/selenium/selenium-server-standalone-2.53.0.jar -role hub
+java -jar selenium-server-standalone-2.53.0.jar -role hub -port 4441
+
+java -jar D:/swused/selenium/selenium-server-standalone-3.6.0.jar -role hub
+
+set path=%path%;D:\swused\selenium\webdrivers;
+
+start a node:
+java -Dwebdriver.gecko.driver="D:/swused/selenium/webdrivers/geckodriver.exe" -Dwebdriver.chrome.driver="D:/swused/selenium/webdrivers/chromedriver.exe" -jar D:/swused/selenium/selenium-server-standalone-2.53.0.jar -role node  -hub http://192.168.0.102:4444/grid/register
+
+java -Dwebdriver.gecko.driver="D:/swused/selenium/webdrivers/geckodriver.exe" -Dwebdriver.chrome.driver="D:/swused/selenium/webdrivers/chromedriver.exe" -jar D:/swused/selenium/selenium-server-standalone-3.6.0.jar -role node  -hub http://192.168.0.102:4444/grid/register
+
+¼ì²ânetstat:
+netstat -a
+
